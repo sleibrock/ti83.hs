@@ -6,12 +6,14 @@ import Control.Monad (forM_)
 myProgram = [
   ClrHome,
   Output 3 2 "Hello World!",
+  Label "A",
   For "A" (1, 10, 1)
     [
-      Goto "B"
+      Set "X" (Add (VAR "A") (INT 1))
     ],
   End
   ]
+
 
 main :: IO ()
 main = do
@@ -28,4 +30,4 @@ main = do
   putStrLn ""
   putStrLn "-- End TI-83 builder"
 
--- end
+-- engd1

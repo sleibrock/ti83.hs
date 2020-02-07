@@ -2,9 +2,10 @@ module Error where
 
 
 data TIError = Nondescript
-             | GotoError String
-             | VarError String
-             | LoopError String
+             | LabelError String
+             | GotoError  String
+             | VarError   String
+             | LoopError  String
              | ParseError String
              deriving (Eq)
 
